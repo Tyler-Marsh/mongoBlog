@@ -1,0 +1,60 @@
+#searchTitle {
+  text-align: center;
+  width: 100%;
+}
+
+.check {
+ padding-right: .5rem;
+}
+
+.tags {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em 2em;
+  align-content: center;
+  justify-content: center;
+}
+
+.tag {
+  margin: 0 auto;
+}
+
+.sub {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+.centerSearch {
+  display: flex;
+  justify-content: center;
+}
+
+.alignGrid {
+  display: grid;
+  justify-content: center;
+  align-content: space-between;
+}
+
+
+// search Form is like posts
+
+
+.searchForms {
+  display: block;
+}
+@media screen and (min-width: 1000px) {
+ .searchForms{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em 2em;
+ }
+}
+
+
+fieldset {
+  font-size: 1em;
+  border-radius: 1em;
+  font-family: sans-serif;
+  border-width: 0;
+}

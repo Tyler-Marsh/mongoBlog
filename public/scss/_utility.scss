@@ -1,0 +1,30 @@
+$increment3: (3,6,9,12,15,18);
+
+@each $increment in $increment3 {
+  .pad-#{$increment} {
+    padding: $increment + px;
+  }
+  .marg-#{$increment} {
+    margin: $increment + px;
+  }
+}
+
+$incrementRem: (1,2,3,4,5);
+
+@each $rem in $incrementRem{
+  .padRem-#{$rem} {
+    padding: $rem  + rem;
+  }
+  .margRem-#{$rem} {
+    margin: $rem + rem;
+  }
+}
+
+@each $rem in $incrementRem{
+  .padRight-#{$rem} {
+    padding-right: $rem + rem;
+  }
+  .padLeft-#{$rem} {
+    padding-left: $rem + rem;
+  }
+}

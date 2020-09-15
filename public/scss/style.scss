@@ -1,0 +1,241 @@
+@import "./colors";
+@import "./layout";
+@import "./utility";
+@import "responsive";
+@import "nav";
+@import "index";
+@import "font";
+@import "footer";
+@import "search";
+
+
+.posts {
+  display: block;
+}
+
+.posts .aPost {
+  margin-top: 2rem;
+}
+
+.headshot {
+  border-radius: 100%;
+  max-height: 10rem;
+  max-width: 10rem;
+}
+
+.text {
+  color: #1f2d3d;
+  opacity: .5;
+}
+
+
+.post {
+  max-width: 50%;
+  margin: 0 auto 3rem auto;
+}
+
+.content-container {
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.themeBG {
+  background-color: #F4FFFD;
+}
+//
+//font-family: 'Martel', serif;
+//font-family: 'Raleway', sans-serif;
+
+$bigFont:  'Gotu', sans-serif;
+
+h1, h2, h3 {
+  font-family: $bigFont;
+  font-weight: bold;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+.primary {
+  color: $primary-color;
+}
+.secondary {
+  color: $secondary-color;
+}
+
+a {color: black;}         /* Unvisited link  */
+a:visited {color: $primary-color;} /* Visited link    */
+a:hover {color: black;}   /* Mouse over link */
+
+
+a {
+  transition: .3s ease-out;
+}
+//a:active {color: black;}  
+/* CREATE COLOR CLASSES */
+/* background-color is after the color */
+
+/* LIGHTEN PRIMARY */
+$percents: (10, 20, 30, 40, 50, 60, 70, 80, 90);
+$decimals: (.10, .20, .30, .40, .50, .60, .70, .80, .90);
+@each $percent in $percents {
+  .primary-L#{$percent} {
+    color: lighten($primary-color, $percent)
+  }
+  .bg-primary-L#{$percent} {
+    background-color: lighten($primary-color, $percent)
+  }
+}
+
+
+/* DARKEN PRIMARY */
+
+@each $percent in $percents {
+  .primary-D#{$percent} {
+    color: darken($primary-color, $percent)
+  }
+  .bg-primary-D#{$percent} {
+    background-color: darken($primary-color, $percent)
+  }
+}
+
+/* SECONDARY COLOR */
+/* IS WHITE CAN ONLY DARKEN */
+
+@each $percent in $percents {
+  .secondary-D#{$percent} {
+    color: darken($secondary-color, $percent)
+  }
+  .bg-secondaryD#{$percent} {
+    background-color: darken($secondary-color, $percent)
+  }
+}
+// # is only for variables?
+/* ALPHA variations  black */
+
+@each $decimal in $decimals {
+  .black-A#{10*$decimal} {
+    color: rgba(0,0,0, + $decimal);
+  }
+  .bg-black-A#{10*$decimal} {
+    background-color: rgba(0,0,0,  $decimal)
+  }
+}
+
+// #{$var} only to make dynamic variable names
+
+/* gradients for the pages */
+
+/* nav */
+
+
+.navItem {
+  font-weight: bold; 
+  font-size: 1.5rem;
+  font-family: $bigFont;
+}
+
+
+.navSection {
+display: flex; 
+flex-direction: row; 
+justify-content: flex-end; 
+/* align-content: flex-end; */
+}
+
+.blogGrid {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 150px auto;
+}
+
+.searchSection {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: auto auto;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.49);
+  position: sticky;
+  top: 50%;
+}
+
+
+.tag {
+  padding: 2px;
+  background: transparent;
+  color: #000000;
+  text-decoration: none;
+  border: none;
+  /* background-color: rgba(0,0,0,.3); */
+  font-size: .75rem;
+  display: inline-block;
+}
+
+.holdSearch {
+  display: flex;
+  justify-content: center;
+}
+
+.search {
+  background-color: rgba(0,0,0,.3);
+  border: 1px rgba(0,0,0, .5) solid;
+  margin-bottom: 1rem;
+  height: 1.25rem;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.search::placeholder {
+  color: black;
+  font-size: 1rem;
+  text-align: center;
+}
+
+
+.go {
+  height: 1.25rem;
+  border: none;
+  width: 1.25rem;
+  background-color: rgba(0,0,0, .5);
+ /* background: linear-gradient(to bottom, white, rgba(0,0,0, .5)); */
+  border-radius:1px;
+}
+
+.center {
+  text-align: center;
+}
+.left {
+  text-align: left;
+}
+
+
+.holdNav {
+  display: flex;
+  margin-top: 1rem;
+  flex-direction: row;
+}
+  .search {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end
+  }
+
+  .nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-right: 1em;
+  }
+
+.line {
+  color: #1f2d3d;
+  opacity: .5;
+}
