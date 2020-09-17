@@ -20,7 +20,10 @@
   "author": "Tyler",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.5",
     "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "mongodb": "^3.6.2",
     "mongoose": "^5.10.3",
     "pug": "^3.0.0"
   },

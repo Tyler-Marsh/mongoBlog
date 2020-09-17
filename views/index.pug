@@ -1,17 +1,16 @@
-include includes/header
-.container
-  .smallMargin(style="margin-left: 1rem;")
-    .featured(style="margin-top: 5rem;")
-      p.white Latest...
-      h1.title.primary Data Modeling in MongoDB
-      p.summary(style="padding: .5rem 0;") Nested data information vs keys and separate tables?
-      .meta(style="display: flex; flex-direction: row;")
-        p.date(style="padding-right: 5px;") September 15, 2020
-        p.tags(style="padding-right: 5px;") MongoDB
+extends layout.pug
+block content
+  .featured(style="margin-top: 5rem;")
+    p.white Latest...
+    h1.title.primary Data Modeling in MongoDB
+    p.summary(style="padding: .5rem 0;") Nested data information vs keys and separate tables?
+    .meta(style="display: flex; flex-direction: row;")
+      p.date(style="padding-right: 5px;") September 15, 2020
+      p.tags(style="padding-right: 5px;") MongoDB
 
-      i.primary(style="text-decoration: underline; font-size: .8rem; padding-top: 1rem;") Check it out
+    i.primary(style="text-decoration: underline; font-size: .8rem; padding-top: 1rem;") Check it out
 
-    p.center.white Other posts
+  p.center.white Other posts
 
     .posts
       .aPost
@@ -32,4 +31,3 @@ include includes/header
         small(style="display: block;") #[i.fas.fa-tags(aria-hidden='true')] Python, Data Science
         p Learn one thing the sports industry hates!!!
         i.primary(style="text-decoration: underline; font-size: .8rem; padding-top: 1rem;") Check it out
-include includes/footer.pug

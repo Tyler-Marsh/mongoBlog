@@ -9,6 +9,11 @@
 @import "search";
 
 
+.postTitle {
+  font-size: 2rem;
+  color: $primary-color;
+}
+
 .posts {
   display: block;
 }

@@ -3,6 +3,8 @@ var path = require('path');
 var indexRouter = require('./routes/index')
 const port = process.env.PORT || 3000;
 
+/* for mongodb connection */
+const mongoose = require('mongoose');
 // set up the app
 var app = express();
 // view engine setup
@@ -26,6 +28,18 @@ app.listen(port, () =>  {
 });
 
 
+/* CONNECT TO MONGOOSE */
+
+mongoose.set('useUnifiedTopology', true);
+mongoose.connect('mongodb://localhost/blog', {useNewUrlParser: true});
+
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log("Successfully connected to MongoDB")
+});
+
+
 /* json to parse POST methods */
 app.use(express.urlencoded({extended: false}));
 // read incoming json
@@ -39,3 +53,4 @@ app.use('/', indexRouter)
 app.use(function (req, res, next) {
   res.render('error');
 });
+

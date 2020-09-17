@@ -7,15 +7,17 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet" href="/css/style.css")
     title Code Blog!
-body.title(style="background-color:#46464f; display: flex; justify-content: space-between; flex-direction: column;")
+body.title(style="background-color:#46464f; display: flex; justify-content: space-between; flex-direction: column; min-height: 100vh;")
   .holdContent
     .holdNav
       .sticky
         .links
-          a(href="/" name="#top").primary.navLink Main
+          a(href="/").primary.navLink Main
           a(href="/search").primary Search
     .container
-      .smallMargin(style="margin-left: 1rem;")
+      .smallMargin(style="margin-left: 1rem; width: 100%;")
         .flex(style="display: flex; flex-direction: row; align-items: flex-end;")
           h1.title(style="color:white;") #[span.primary TylerMarsh].me
         h3.title(style="color:#fff;") Documenting my #[span.primary journey] in coding
+        block content
+  include includes/footer.pug

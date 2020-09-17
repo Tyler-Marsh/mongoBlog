@@ -13,16 +13,27 @@
   gap: 1em 2em;
   align-content: center;
   justify-content: center;
+
+}
+
+.flexTags {
+  display: flex;
+  flex-direction: rows;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-between;
+  max-width: 50%;
+  margin: 0 auto;
 }
 
 .tag {
-  margin: 0 auto;
+  //margin: 0 auto;
+  
 }
 
 .sub {
   margin: 0 auto;
   text-align: center;
-  width: 100%;
 }
 
 .centerSearch {
@@ -57,4 +68,8 @@ fieldset {
   border-radius: 1em;
   font-family: sans-serif;
   border-width: 0;
+}
+
+#searchTags {
+  margin-top: 2rem;
 }
