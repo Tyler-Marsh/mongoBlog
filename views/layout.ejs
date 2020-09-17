@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet" >
+    <meta charset="UTF-8">
+    <meta name="viewport", content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>title Code Blog! </title>
+  </head>
+<body clas="title" style="background-color:#46464f; display: flex; justify-content: space-between;flex-direction: column; min-height: 100vh;">
+  <div class="holdContent">
+    <div class="holdNav">
+      <div class="sticky">
+        <div class="links">
+          <a href="/" name="#top" class="primary navLink">Main</a>
+          <a href="/search" class="primary">Search</a>
+        </div>
+      </div>
+    </div>
+    <!--Below is holdContent flexes footer into place-->
+    <!-- decrease width of web page -->
+    <div class="container">
+      <div class="smallmargin" style="margin-left: 1rem; width: 100%;">
+        <div class="flex" style="display: flex; flex-direction: row; align-items: flex-end;">
+        <h1 class="title white"> <span class="primary">Tyler Marsh</span>.me</h1>
+      </div>
+        <h3 class="title white">Documenting my journey in<span class="primary"> coding</span></h3>
+        <!--Inserts content in between the header and footer in other vieww-->
+        <%- body %>
+      </div>
+
+    </div> 
+  </div>
+  <!-- end holdContent-->
+</div>
+  <footer style="background-color: rgba(0,0,0, .4); margin-top: 2rem;">
+    <div class="container">
+      <div class="footer">
+        <div class="myLinks">
+          <p class="white" style="text-decoration: underline">My Links</p>
+          <a class="primary" href="https://github.com/Tyler-Marsh">My GitHub</a>
+          <a class="primary" href="https://www.linkedin.com/in/tyler-marsh-a99139188/">My LinkedIn</a>
+        </div>
+        <div class="myLinks">
+          <p class="white" style="text-decoration: underline">Navigation</p>
+          <a class="primary"  href="#top">Top of Page</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>
