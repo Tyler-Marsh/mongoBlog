@@ -5,7 +5,8 @@ const { Schema } = require("mongoose");
 const userSchema = new Schema({
   username: String,
   password: String,
-  posts: [{type: Schema.Types.ObjectId, ref: "Post"}]
+  posts: [{type: Schema.Types.ObjectId, ref: "Post"}],
+  session_id: String,
 });
 
 const User = mongoose.model('user', userSchema);

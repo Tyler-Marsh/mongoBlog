@@ -3,6 +3,7 @@ var path = require('path');
 var indexRouter = require('./routes/index');
 var adminRouter = require('./routes/admin');
 var expressLayouts = require('express-ejs-layouts');
+var cookieParser = require('cookie-parser');
 
 
 /* for mongodb connection */
@@ -17,7 +18,8 @@ const port = process.env.PORT || 3000;
 // set up the app
 var app = express();
 app.use(expressLayouts);
-
+// Parse cookies :)
+app.use(cookieParser());
 // in development log request made
 app.use(morgan('dev'));
 // view engine setup

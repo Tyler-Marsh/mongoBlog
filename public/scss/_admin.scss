@@ -1,0 +1,68 @@
+
+.bar:hover{
+  box-shadow: 1px 1px 8px 1px #dcdcdc;
+}
+.bar:focus-within{
+  box-shadow: 1px 1px 8px 1px #dcdcdc;
+  outline:none;
+}
+
+
+.searchbar{
+  width: 10rem;
+  font-size:1rem;
+  text-align: center;
+
+}
+
+
+.forAdminSearch {
+  height: 2rem;
+  font-size: 1rem;
+  //border-radius: 1em;
+  font-family: sans-serif;
+  border-width: 0;
+}
+
+#adminSearch {
+  margin-left: 5px;
+  border: none;
+  background-color: $primary-color;
+  color: #FFF;
+  border-radius: 25%;
+
+}
+
+.editButtons {
+  height: 1rem;
+  width: 2rem;
+}
+
+.editLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.editLink button {
+  margin-right: 1rem;
+  padding: .3rem;
+}
+
+.edit {
+  background-color: $primary-color;
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: underline;
+  border: none;
+  border-radius: 5px;
+}
+
+.delete {
+  background-color: red;
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: underline;
+  border: none;
+  border-radius: 5px;
+}

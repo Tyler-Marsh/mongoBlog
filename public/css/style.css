@@ -464,6 +464,79 @@ fieldset {
   margin-top: 2rem;
 }
 
+.bar:hover {
+  -webkit-box-shadow: 1px 1px 8px 1px #dcdcdc;
+          box-shadow: 1px 1px 8px 1px #dcdcdc;
+}
+
+.bar:focus-within {
+  -webkit-box-shadow: 1px 1px 8px 1px #dcdcdc;
+          box-shadow: 1px 1px 8px 1px #dcdcdc;
+  outline: none;
+}
+
+.searchbar {
+  width: 10rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.forAdminSearch {
+  height: 2rem;
+  font-size: 1rem;
+  font-family: sans-serif;
+  border-width: 0;
+}
+
+#adminSearch {
+  margin-left: 5px;
+  border: none;
+  background-color: #22BFB0;
+  color: #FFF;
+  border-radius: 25%;
+}
+
+.editButtons {
+  height: 1rem;
+  width: 2rem;
+}
+
+.editLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.editLink button {
+  margin-right: 1rem;
+  padding: .3rem;
+}
+
+.edit {
+  background-color: #22BFB0;
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: underline;
+  border: none;
+  border-radius: 5px;
+}
+
+.delete {
+  background-color: red;
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: underline;
+  border: none;
+  border-radius: 5px;
+}
+
 .postTitle {
   font-size: 2rem;
   color: #22BFB0;
