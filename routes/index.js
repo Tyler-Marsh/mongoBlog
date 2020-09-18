@@ -20,17 +20,20 @@ router.get('/contact', function(req, res, next) {
     res.render('contact');
 }); */
 
+// DOESN'T WORK
+/*
 router.get("/examplepost", function(req, res, next) {
     res.render("examplepost");
 })
-
-
+*/
 router.get("/search", function(req, res, next) {
     res.render("search");
 })
 
+// DOESN'T WORK
+/* 
 router.get("/post", function(req, res, next) {
     res.render("post");
-})
+}) */
 // export in node.js
 module.exports = router

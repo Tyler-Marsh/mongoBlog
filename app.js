@@ -1,12 +1,25 @@
 var express = require('express');
 var path = require('path');
-var indexRouter = require('./routes/index')
-const port = process.env.PORT || 3000;
+var indexRouter = require('./routes/index');
+var adminRouter = require('./routes/admin');
+var expressLayouts = require('express-ejs-layouts');
+
 
 /* for mongodb connection */
 const mongoose = require('mongoose');
+
+// log requests to gitbash
+
+const morgan = require('morgan');
+
+const port = process.env.PORT || 3000;
+
 // set up the app
 var app = express();
+app.use(expressLayouts);
+
+// in development log request made
+app.use(morgan('dev'));
 // view engine setup
 
 // used for setting up inlcudes in pug templating
@@ -15,7 +28,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 // set up as pug
 
-app.set('view engine', 'pug');
+app.set('view engine', 'ejs');
 
 
 // set up static assets to be accessed
@@ -46,7 +59,9 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 /* ALL NON-GALLERY ROUTES */
-app.use('/', indexRouter)
+app.use('/', indexRouter);
+
+app.use('/admin', adminRouter);
 
 
 /* 404 BC used at end of stack */
