@@ -8,18 +8,39 @@
       </div>
     </div>
   </div>
+  <h1 class="primary center" style="width: 100%; margin-top: 1rem;">Create a Post</h1>
+  <%- include(path) %>
 
-  <div class="container">
-  <div style="margin-top: 2rem; width: 100%;">
-    <div style="display: flex; justify-content: center; width: 100%;">
-    <div  class="forAdminSearch" style="width: 100%;" >
-        <p class="center white"><label for="title">Title</label></p>
-        <p style="text-align: center;">
-        <input id="postTitle" class="searchbar" type="text" title="Title" placeholder="Title" name="title" style="width: 75%; text-align: center; margin: auto;">
-      </p>
-      </div>
-      </div>
-    </div>
-  </div>
-</div>
-  </div>
+  <script>
+    // to create elements to be inserted into the DOM
+   // for the URL
+    const baseApiUrl = "<%= baseApiUrl %>";
+    /* Create an eventListener for saving the post */
+
+    const save = document.getElementById("save");
+    save.addEventListener("click", () => {
+      // COLLECT TAGS DATA
+      const taggers = document.getElementsByClassName('oneTag');
+      const tagValues = [];
+      for (let i = 0; i < taggers.length; i++) {
+        if (taggers[i].value !== "") {
+          tagValues.push(taggers[i].value);
+        }
+      }
+      // COLLECT TITLE
+      const title = document.getElementById("postTitle").value;
+      // COLLECT MARKDOWN
+      const markdown = document.getElementById("markdown").value;
+
+      const description = document.getElementById("postDescription").value;
+
+      const post = {
+        tagValues,
+        title,
+        markdown,
+        description
+      };
+      console.log(post, baseApiUrl)
+    });
+ 
+  </script>

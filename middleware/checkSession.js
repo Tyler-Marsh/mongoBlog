@@ -12,7 +12,6 @@ const checkSession =  async (req, res, next) => {
       let username = req.cookies.username;
       let session_id = req.cookies.session_id;
       user = await User.findOne({ username: username })
-      console.log("USER", user);
       if (user.session_id === session_id) {
         req.auth = true;
       }  else {

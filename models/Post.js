@@ -3,10 +3,11 @@ const { Schema } = require("mongoose");
 const mongoose = require('mongoose');
 const postSchema = new Schema({
 	title: String,
-	body: String,
+	markdown: String,
 	date:  { type: Date, default: Date.now },
 	tags: [String],
-  user: {type: Schema.Types.ObjectId, ref: "User"}
+	user: {type: Schema.Types.ObjectId, ref: "User"},
+	description: String
 });
 
 

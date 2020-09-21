@@ -66,3 +66,31 @@
   border: none;
   border-radius: 5px;
 }
+
+.singleTag {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+// improving like for bootstrap
+.searchElem {
+  border: 2px solid black;
+
+}
+
+.searchElem:focus {
+  outline: none !important;
+  border: 2px solid $primary-color;
+  box-shadow: 0 0 10px $primary-color;
+}
+
+
+.oneTag {
+  width: 5rem;
+}
+
+.tagLabel {
+  color: white;
+  text-decoration: underline;
+  margin: 0 1rem;
+}

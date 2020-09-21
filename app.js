@@ -26,11 +26,12 @@ app.use(morgan('dev'));
 
 // used for setting up inlcudes in pug templating
 app.locals.basedir = path.join(__dirname, 'views');
+app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 // set up as pug
 
-app.set('view engine', 'ejs');
+//app.set('view engine', 'ejs');
 
 
 // set up static assets to be accessed
@@ -56,6 +57,7 @@ db.once('open', function() {
 
 
 /* json to parse POST methods */
+// comes before using routers
 app.use(express.urlencoded({extended: false}));
 // read incoming json
 app.use(express.json());

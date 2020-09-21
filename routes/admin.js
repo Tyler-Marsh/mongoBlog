@@ -7,9 +7,18 @@ const bcryptjs = require('bcryptjs');
 const cookieParser = require('cookie-parser');
 //const mongoose = require('mongoose');
 var crypto = require('crypto');
+// import config to pass API route into views
+// path to find the includes in EJS
+
+const Post = require('../models/Post');
+
+const { baseApiUrl } = require("./config");
+
+
 const checkSession = require('../middleware/checkSession');
 
-
+// PATH FOR incldues
+let includePath = path.join(__dirname, '../views/_form_fields');
 /* generates session ID */
 var generate_key = function() {
   // 16 bytes is likely to be more than enough,
@@ -24,7 +33,7 @@ var router = express.Router()
 // RELATIVE PATH WORKS FOR VIEWS
 // SEPARATE ADMIN ROUTING
 router.get("/login", function(req, res, next) {
-  console.log(req.cookies)
+  
   res.render("admin/admin-login", { layout: 'admin/adminlayout.ejs'})
 })
 
@@ -45,7 +54,6 @@ router.post("/login", async function(req, res, next ) {
       } else {
         if (bcryptjs.compareSync(req.body.secretword, user.password)) {
           /*  IF PASSWORDS MATCH DO THE FOLLOWING      */
-
           // set a cookie for the username
           res.cookie("username", req.body.adminName);
           // generate a session ID
@@ -90,11 +98,14 @@ router.post("/login", async function(req, res, next ) {
   }
   res.redirect('/');
   })
-
+  
   router.get('/dashboard/create', checkSession, function(req, res, next) {
       if (req.auth) {
-        res.render("admin/admin-dashboard-create", { layout: 'admin/adminlayout.ejs'})
+        console.log("DIR", __dirname);
+        console.log("PATH", __filename)
+        res.render("admin/admin-dashboard-create", { layout: 'admin/adminlayout.ejs',
+      baseApiUrl: "localhost:3000/admin",path: includePath, post: new Post()});
       }
-  })
+  });
 
 module.exports = router;
