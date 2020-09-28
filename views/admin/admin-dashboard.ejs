@@ -17,27 +17,10 @@
   <h3 class="center primary" style="margin-top: 1rem;">Posts</h3>
   <div class="container">      
   <div class="posts">
-    <div class="aPost">
-      <h2 class="title primary">Controllers in Spring</h2>
-      <small>September 15th, 2020</small>
-      <small style="display: block;">Java, Spring</small>
-      <p> Learn this one secret tech companies HATE!!!</p>
-      <i class="primary" style="text-decoration: underline; font-size: .8rem; padding-top: 1rem;">
-        Check it out
-      </i>
-      <div class="editLinks">
-        <a href="/" class="editLink">
-          <button class="edit">
-            Edit
-          </button>
-        </a>
-        <a href="/" class="editLink">
-        <button class="delete">
-          Delete
-        </button>
-        </a>
-      </div>
-  </div>
+    <!-- FOR EACH LOOP OVER INCLUDE _post -->
+    <% posts.forEach(function(post){ %>
+      <%- include(path, {post: post}); %>
+    <% }); %>
   </div>
 
   </div>

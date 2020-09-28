@@ -1,8 +1,10 @@
-<div class="container" style="margin-top: 2rem;">
+
   <div  class="forAdminSearch" style="width: 100%; margin-top: 1rem;" >
       <p class="center white"><label for="title">Title</label></p>
       <p style="text-align: center;">
         <!--FIRST INPUT -->
+        <!-- define the form -->
+        
       <input id="postTitle" class="searchbar searchElem" type="text" title="Title" placeholder="Title" required value="<%= post.title %>" name="title" style="width: 75%; text-align: center; margin: auto;">
     </p>
     </div>
@@ -59,7 +61,7 @@
     <div  class="forAdminSearch" style="width: 100%; margin-top: 1rem;" >
       <p class="center white"><label for="title">Markdown</label></p>
       <p style="text-align: center;">
-      <textarea rows="6" name="markdown" id="markdown" class="searchbar searchElem" type="text" required title="Title" placeholder="Markdown" name="title" style="width: 75%; text-align: left; margin: auto; display: block" value="<%= post.markdown %>">
+      <textarea rows="6" name="markdown" id="markdown" class="searchbar searchElem" type="text" required title="Title" placeholder="Markdown" style="width: 75%; text-align: left; margin: auto; display: block"> <%= post.markdown %>
         </textarea>
       </p>
       <div style="text-align: center; margin-top: 1rem;">
@@ -72,5 +74,4 @@
 </div>
 
 <!--Hold content-->
-</div>
 </div>

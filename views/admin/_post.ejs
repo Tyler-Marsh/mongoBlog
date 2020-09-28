@@ -1,0 +1,22 @@
+<div class="aPost" style="color:white;">
+  <h2 class="title primary"><%= post.title %></h2>
+  <small><%= post.date.toLocaleDateString() %></small>
+  <!-- If error here loop .FOREACH -->
+  <small style="display: block;"><%= post.tags[0], post.tags[1], post.tags[2] %></small>
+  <p><%= post.description %></p>
+  <i class="primary" style="text-decoration: underline; font-size: .8rem; padding-top: 1rem;">
+    Check it out
+  </i>
+  <div class="editLinks">
+    <a href="/admin/dashboard/edit/<%= post.slug %>" class="editLink">
+      <button class="edit">
+        Edit
+      </button>
+    </a>
+    <a href="/admin/dashboard/delete/<%= post.slug %>" class="editLink">
+    <button class="delete">
+      Delete
+    </button>
+    </a>
+  </div>
+</div>

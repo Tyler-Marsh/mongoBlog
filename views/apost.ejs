@@ -1,0 +1,11 @@
+<div class="featured" style="text-align: center; width: 100%; margin-top: 2rem;">
+  <h1 class="postTitle clientTitle"><%= post.title %></h1>
+  <small class="date primary "><%= post.date.toLocaleDateString() %></small>
+  <small class="primary"><%= post.tags %></small>
+  <small class="primary">Author: <%= post.user.username %> </small>
+  <h3 style="border-bottom:2px solid black; color: #fff; margin-bottom: 1rem;"> <%= post.description %></h3>
+  </div>
+  <article>
+    <%- post.html %>
+
+  </article> 

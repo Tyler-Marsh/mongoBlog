@@ -1,0 +1,77 @@
+
+  <div  class="forAdminSearch" style="width: 100%; margin-top: 1rem;" >
+    <p class="center white"><label for="title">Title</label></p>
+    <p style="text-align: center;">
+      <!--FIRST INPUT -->
+      <!-- define the form -->
+      
+    <input id="postTitle" class="searchbar searchElem" type="text" title="Title" placeholder="Title" required value="<%= post.title %>" name="title" style="width: 75%; text-align: center; margin: auto;">
+  </p>
+  </div>
+
+
+  <div  class="forAdminSearch" style="width: 100%; margin-top: 1rem;" >
+    <p class="center white"><label for="title">Description</label></p>
+    <p style="text-align: center;">
+      <!--FIRST INPUT -->
+    <input id="postDescription" class="searchbar searchElem" type="text" title="Title" placeholder="Description" required value="<%= post.description %>" name="description" style="width: 75%; text-align: center; margin: auto;">
+  </p>
+  </div>
+
+  <div  class="forAdminSearch" style="width: 100%; margin-top: 1rem; margin-bottom: 4rem;" >
+    <p class="center white"><label for="title">Tags</label></p>
+
+    <!-- flex the tags inputs -->
+        <div style="display: flex; flex-direction: row; justify-content: center; text-align: center; flex-wrap: wrap; margin-top: 1rem;">
+
+          <div>
+        <label class="tagLabel">Tag 1</label>
+        <!--SECOND INPUT -->
+        <div style="text-align: center;">
+        <input class="oneTag searchElem"  required value="<%= post.tags[0] %>" name="tag1">
+
+      </div>
+    </div>
+
+    <div>
+      <label class="tagLabel">Tag 2</label>
+      <!--SECOND INPUT -->
+      <div style="text-align: center;">
+      <input class="oneTag searchElem" value="<%= post.tags[1] %>" name="tag2">
+
+    </div>
+  </div>
+
+  <div>
+    <label class="tagLabel">Tag 3</label>
+    <!--THIRD INPUT -->
+    <div style="text-align: center;">
+    <input class="oneTag searchElem"  value="<%= post.tags[2] %>"name="tag3">
+
+  </div>
+</div>
+
+
+    </div>
+        
+   <!--   </div>-->  
+  <!--   </div> -->  
+  </div>
+
+  <div  class="forAdminSearch" style="width: 100%; margin-top: 1rem;" >
+    <p class="center white"><label for="title">Markdown</label></p>
+    <p style="text-align: center;">
+    <textarea rows="6" name="markdown" id="markdown" class="searchbar searchElem" type="text" required title="Title" placeholder="Markdown" style="width: 75%; text-align: left; margin: auto; display: block"> <%= post.markdown %>
+      </textarea>
+    </p>
+    <div style="text-align: center; margin-top: 1rem;">
+      <p id="errors"></p>
+    <button class="delete" style="margin-bottom: 5rem;" id="delete">Delete</button>
+  </div>
+  </div>
+  <!-- two classless divs-->
+  </div>
+</div>
+
+<!--Hold content-->
+</div>

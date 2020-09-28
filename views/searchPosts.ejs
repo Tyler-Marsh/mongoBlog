@@ -1,0 +1,20 @@
+ <h1 id="searchTitle" class="primary featured" style="margin-top: 3rem;">Search</h1> 
+  <div style="margin-top: 1rem;"> </div>
+  <div style="display: flex; justify-content: center;">
+    <form method="GET" action="/search">
+      <input type="text" name="searchTerm" class="searchInput">
+      <p style="display:flex; justify-content: center;">
+      <input type="submit" value="GO" style="margin-top: 1rem; padding: 1rem; background-color: rgba(0,0,0,0); border: 2px dotted #22BFB0; color: white; font-weight: bold; font-size: 2rem;">
+    </p>
+    </form>
+  </div>
+<% if(posts.length >= 1) { %>
+<p class="center white">Posts</p>
+<div class="posts">
+  <% posts.forEach(function(post){ %>
+    <%- include(path, {post: post}); %>
+  <% }); %>
+  </div>
+<% } else { %>
+  <h2 class="center white">Sorry, no posts found.</h2>
+  <% } %>

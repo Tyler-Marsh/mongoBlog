@@ -33,8 +33,12 @@ html {
 
 
 @media screen and (min-width: 501px) {
-  .container {
+  .container, pre {
     width: 85%;
+  }
+
+  .searchInput {
+    padding: 1rem;
   }
 
   .posts .aPost {
@@ -43,7 +47,7 @@ html {
 }
 
 @media screen and (min-width: 1000px) {
-  .container {
+  .container, pre {
     width: 70%;
   }
 
@@ -66,8 +70,6 @@ html {
   .featured .postTitle {
     font-size: 2.3rem
   }
-
-
 
 }
 

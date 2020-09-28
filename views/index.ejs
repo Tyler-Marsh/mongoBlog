@@ -1,34 +1,22 @@
 <div class="featured" style="margin-top: 5rem;">
     <p class="white">Latest...</p>
-    <h1 class="title primary">Data Modeling in MongoDB</h1>
-    <p class="summary" style="padding: .5rem 0;">Nest data information vs keys and separate tables?</p>
-    <div class="meta" style="display: flex; flex-direction: row;">
-      <p class="date" style="padding-right: 5px;">September 15, 2020</p>
-      <p class="tags" style="padding-right: 5px;">MongoDB</p>
+    <a href="/posts/<%= posts[0].slug  %>">
+      <h1 class="title primary clientTitle"><%= posts[0].title %></h1>
+      </a>
+    <p class="summary white" style="padding: .5rem 0;"><%= posts[0].description %></p>
+    <div class="meta white" style="display: flex; flex-direction: row;">
+      <p class="date" style="padding-right: 5px;"><%= posts[0].date.toLocaleDateString() %></p>
+      <p class="tags" style="padding-right: 5px;"><%= posts[0].tags %></p>
     </div>
+    <a href="/posts/<%= posts[0].slug %>">
     <i class="primary" style="text-decoration: underline; font-size: .8rem; padding-top:1rem">Check it out
     </i>
+    </a>
 </div>
 
 <p class="center white">Other posts</p>
 <div class="posts">
-  <div class="aPost">
-    <h2 class="title primary">Controllers in Spring</h2>
-    <small>September 15th, 2020</small>
-    <small style="display: block;">Java, Spring</small>
-    <p> Learn this one secret tech companies HATE!!!</p>
-    <i class="primary" style="text-decoration: underline; font-size: .8rem; padding-top: 1rem;">
-      Check it out
-    </i>
-  </div>
-
-  <div class="aPost">
-    <h2 class="title primary">Controllers in Spring</h2>
-    <small>September 15th, 2020</small>
-    <small style="display: block;">Java, Spring</small>
-    <p> Learn this one secret tech companies HATE!!!</p>
-    <i class="primary" style="text-decoration: underline; font-size: .8rem; padding-top: 1rem;">
-      Check it out
-    </i>
-  </div>
-</div>
+  <% posts.shift() %>
+  <% posts.forEach(function(post){ %>
+    <%- include(path, {post: post}); %>
+  <% }); %>
