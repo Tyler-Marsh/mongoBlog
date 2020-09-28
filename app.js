@@ -45,7 +45,7 @@ app.listen(port, () =>  {
 });
 
 /* CONNECT TO MONGOOSE */
-
+// import connection to mongoDB
 const uri = require("./mongoURI");
 
 
