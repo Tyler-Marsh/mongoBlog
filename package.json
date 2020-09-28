@@ -1,11 +1,11 @@
 {
   "name": "code-blog",
   "version": "1.0.0",
-  "description": "coding blog",
+  "description": "Blog",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "keywords": [
     "JavaScript",
