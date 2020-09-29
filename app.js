@@ -94,8 +94,9 @@ app.use(function (req, res, next) {
 app.use(function(err, req, res, next) {
   console.log("@@@@@@@@@@@@@@@@@@@@@@@    500 HANDLER");
   res.status(err.status || 500);
+  console.log(err.message)
   res.render('error', {
-    message: err.message,
+    message: "Sorry, there was an issue with the database and/or server",
     error: {}
   });
 });
