@@ -23,7 +23,7 @@ Authentication and hidden routes are used to enable creating, editing, and delet
 
 ## Edit a post
 
-![](/edit-post.png)
+![](/edit-page.png)
 
 ## Admin dashboard
 
