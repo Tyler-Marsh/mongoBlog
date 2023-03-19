@@ -29,3 +29,8 @@ Authentication and hidden routes are used to enable creating, editing, and delet
 
 ![](/admin-dashboard.png)
 
+
+## Post view
+
+![](/post.png)
+
